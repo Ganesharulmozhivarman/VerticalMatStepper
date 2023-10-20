@@ -1,0 +1,15 @@
+<div style="width: 100%; display: flex;flex-direction: row;">
+    <div style="width: 25%;">
+
+        <app-stepperflow (selectedField)="Collected($event)"></app-stepperflow>
+    </div>
+    <div style="width: 75%;padding-top: 25px;">
+        <app-products *ngIf="(currentpage | async) == 0"></app-products>
+        <app-service *ngIf="(currentpage | async) == 1"></app-service>
+        <app-support *ngIf="(currentpage | async) == 2"></app-support>
+        <app-helpcomp  *ngIf="(currentpage | async) == 3"></app-helpcomp>
+    </div>
+
+    
+
+</div>
